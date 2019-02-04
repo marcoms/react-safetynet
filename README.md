@@ -30,3 +30,13 @@ class App extends React.Component {
 ### Result
 
 ![Result](./docs/result.png)
+
+## API
+
+The following may be passed as `props`.
+
+### `errorHandler`
+
+- Type: `(error: Error, errorInfo: React.ErrorInfo) => void`
+
+Will be called when an error is caught by the SafetyNet instance. For complete documenation of `error` and `errorInfo`, see the [React docs](https://reactjs.org/docs/react-component.html#componentdidcatch).
