@@ -1,5 +1,6 @@
 
 import * as React from 'react';
+import './index.css';
 
 type SafetyNetState = {
 	hasError: boolean;
@@ -15,9 +16,12 @@ class SafetyNet extends React.Component {
 	}
 
 	render() {
-		return this.props.children;
+		return (
+			<div className="SafetyNet">
+				{this.props.children}
+			</div>
+		)
 	}
 }
-console.log('what', SafetyNet);
 
 export default SafetyNet;

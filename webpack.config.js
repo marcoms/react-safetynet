@@ -6,6 +6,12 @@ module.exports = {
 	output: {
 		filename: 'index.js',
 		path: path.resolve(__dirname, 'dist'),
+		library: 'SafetyNet',
+		libraryTarget: 'commonjs2',
+	},
+
+	resolve: {
+		extensions: ['.js', '.ts', '.tsx'],
 	},
 
 	module: {
@@ -13,6 +19,14 @@ module.exports = {
 			{
 				test: /\.tsx?$/,
 				use: 'ts-loader',
+			},
+
+			{
+				test: /\.css$/,
+				use: [
+					'style-loader',
+					'css-loader',
+				],
 			},
 		],
 	},
