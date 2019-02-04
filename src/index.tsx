@@ -47,10 +47,13 @@ class SafetyNet extends React.Component<SafetyNetProps, SafetyNetState> {
 				<div className="SafetyNet SafetyNet--error">
 					<p className="SafetyNet__ErrorHeader">Error encountered within this boundary:</p>
 
-					<pre className="SafetyNet__ErrorDetails">
-						{this.state.error.name}: {this.state.error.message}
-						{this.state.errorInfo.componentStack}
-					</pre>
+					<details className="SafetyNet__Revealer">
+						<summary>Show details</summary>
+						<pre className="SafetyNet__ErrorDetails">
+							{this.state.error.name}: {this.state.error.message}
+							{this.state.errorInfo.componentStack}
+						</pre>
+					</details>
 				</div>
 			)
 		}

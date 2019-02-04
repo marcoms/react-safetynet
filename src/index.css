@@ -12,6 +12,10 @@
 	margin: 0 0 8px;
 }
 
+.SafetyNet__Revealer > summary {
+	cursor: pointer;
+}
+
 .SafetyNet__ErrorDetails {
 	font-family: monospace;
 	background: black;
